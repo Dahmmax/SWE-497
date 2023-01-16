@@ -1,0 +1,47 @@
+<section class="case-studies" id="case-studies-section">
+                <div class="row grid-margin">
+                    <div class="col-12 text-center pb-5">
+                        <h2>Create New Quiz?</h2>
+                        <?php if (isset($_SESSION['username'])) : ?>
+                        <h6 class="section-subtitle text-muted">You have
+                            <?php echo $numOfSchedules; ?> of 3 saved schedules, <br> <br>
+                            <?php if ($numOfSchedules < 3) :  ?>
+                            <button class="btn btn-opacity-success ml-1" onclick="location.href='schedule.php';">Create
+                                New</button>
+                            <?php endif ?>
+                        </h6>
+                        <?php endif ?>
+                    </div>
+                    <?php
+                    foreach ($schedules as $schedule) : ?>
+                    <div class="col-12 col-md-6 col-lg-3 stretch-card mb-3 mb-lg-0" data-aos="zoom-in">
+                        <div class="card color-cards">
+                            <div class="card-body p-0">
+                                <div class="bg-primary text-center card-contents">
+                                    <div class="card-image">
+
+                                        <img src="<?php echo  $schedule['img'];  ?>  " class="case-studies-card-img">
+
+
+                                        <!-- <img src="scr-png/6362ad562128d.png" class="case-studies-card-img" alt=""> -->
+                                    </div>
+                                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                                        <div>
+                                            <h6 class="text-white pb-2 px-3">You can view and manage your schedule</h6>
+                                            <?php echo  '<form action="schedule.php"  method="POST">
+                                                   <button type="submit" class="btn btn-white" value="' . $schedule['schedule_id'] . ' " name="schedule_id">My Schedule</button>
+                                                    <input hidden name ="schedule_name" value="' . $schedule['schedule_name'] . '"> </form>'; ?>
+                                            <!-- <button class="btn btn-white">Read More</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-details text-center pt-4">
+                                    <h6 class="m-0 pb-1"><?php echo  $schedule['schedule_name']; ?></h6>
+                                    <p><?php echo  $schedule['created_at']; ?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    <?php endforeach; ?>
+            </section>

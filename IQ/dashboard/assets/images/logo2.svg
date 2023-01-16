@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1080" height="1080" viewBox="0 0 1080 1080" xml:space="preserve">
+<desc>Created with Fabric.js 5.2.4</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 540 540)" id="fc1520ee-534e-4044-a32b-1448020c7259"  >
+</g>
+<g transform="matrix(1 0 0 1 540 540)" id="71517833-c9ac-4c13-aeae-4329db24c9f2"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke"  x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+</g>
+<g transform="matrix(1 0 0 1 273.3 503.48)"  >
+<linearGradient id="SVGID_37" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 1 0 0)"  x1="-14.647" y1="33.7483" x2="656.5567" y2="33.7483">
+<stop offset="0.1502404%" style="stop-color:rgb(218,140,255);stop-opacity: 1"/>
+<stop offset="100%" style="stop-color:rgb(154,85,255);stop-opacity: 1"/>
+</linearGradient>
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: url(#SVGID_37); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-51.3, -33.72)" d="M 100.2 30 L 53.1 6.5 C 51.9 5.9 50.6 5.9 49.4 6.5 L 2.3 30 C 0.9 30.7 0 32.2 0 33.7 C 0 35.300000000000004 0.9 36.7 2.3 37.400000000000006 L 49.4 61 C 50 61.3 50.6 61.4 51.3 61.4 C 51.9 61.4 52.599999999999994 61.3 53.199999999999996 61 L 100.3 37.5 C 101.7 36.8 102.6 35.4 102.6 33.8 C 102.5 32.2 101.6 30.7 100.2 30 z M 51.2 52.7 L 13.4 33.7 L 51.199999999999996 14.800000000000004 L 89 33.7 L 51.2 52.7 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(1 0 0 1 273.2 562.33)"  >
+<linearGradient id="SVGID_38" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 1 0 0)"  x1="-14.647" y1="92.6076" x2="656.5567" y2="92.6076">
+<stop offset="0.1502404%" style="stop-color:rgb(218,140,255);stop-opacity: 1"/>
+<stop offset="100%" style="stop-color:rgb(154,85,255);stop-opacity: 1"/>
+</linearGradient>
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: url(#SVGID_38); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-51.2, -92.59)" d="M 102 79 C 101 77 98.5 76.1 96.4 77.1 L 51.2 99.8 L 6 77.1 C 4 76.1 1.5 76.89999999999999 0.40000000000000036 79 C -0.5999999999999996 81 0.20000000000000034 83.5 2.3000000000000003 84.6 L 49.4 108.1 C 50 108.39999999999999 50.6 108.5 51.3 108.5 C 51.9 108.5 52.599999999999994 108.4 53.199999999999996 108.1 L 100.3 84.6 C 102.2 83.5 103 81 102 79 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(1 0 0 1 273.2 538.8)"  >
+<linearGradient id="SVGID_39" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 1 0 0)"  x1="-14.647" y1="69.0637" x2="656.5567" y2="69.0637">
+<stop offset="0.1502404%" style="stop-color:rgb(218,140,255);stop-opacity: 1"/>
+<stop offset="100%" style="stop-color:rgb(154,85,255);stop-opacity: 1"/>
+</linearGradient>
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: url(#SVGID_39); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-51.2, -69.04)" d="M 102 55.4 C 101 53.4 98.5 52.5 96.4 53.5 L 51.2 76.2 L 6 53.6 C 4 52.6 1.5 53.4 0.40000000000000036 55.5 C -0.5999999999999996 57.5 0.20000000000000034 60 2.3000000000000003 61.1 L 49.4 84.6 C 50 84.89999999999999 50.6 85 51.3 85 C 51.9 85 52.599999999999994 84.9 53.199999999999996 84.6 L 100.2 61 C 102.2 60 103 57.5 102 55.4 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(1 0 0 1 623.68 522.92)" style="" id="c3b2d94d-b19a-4b5b-8c01-9c5bde5eb9dc"  >
+		<text xml:space="preserve" font-family="Alegreya" font-size="84" font-style="normal" font-weight="700" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(212,133,255); fill-rule: nonzero; opacity: 1; white-space: pre;" ><tspan x="-282.24" y="26.39" >Interactive Quiz</tspan></text>
+</g>
+</svg>
