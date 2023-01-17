@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2023 at 02:21 AM
+-- Generation Time: Jan 17, 2023 at 02:33 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `answers`
 --
 
+DROP TABLE IF EXISTS `answers`;
 CREATE TABLE `answers` (
   `answer_id` int(11) NOT NULL,
   `Head` varchar(255) NOT NULL,
@@ -57,6 +58,7 @@ INSERT INTO `answers` (`answer_id`, `Head`, `Question_id`) VALUES
 -- Table structure for table `question`
 --
 
+DROP TABLE IF EXISTS `question`;
 CREATE TABLE `question` (
   `Question_Id` int(255) NOT NULL,
   `Head` varchar(255) NOT NULL,
@@ -81,6 +83,7 @@ INSERT INTO `question` (`Question_Id`, `Head`, `Score`, `CorrectAnswer`, `QuizId
 -- Table structure for table `quiz`
 --
 
+DROP TABLE IF EXISTS `quiz`;
 CREATE TABLE `quiz` (
   `QuizId` int(255) NOT NULL,
   `QuizTitle` varchar(255) NOT NULL,
@@ -105,6 +108,7 @@ INSERT INTO `quiz` (`QuizId`, `QuizTitle`, `Duration`, `QuizCode`, `GradingType`
 -- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(255) NOT NULL,
   `username` varchar(255) NOT NULL,
