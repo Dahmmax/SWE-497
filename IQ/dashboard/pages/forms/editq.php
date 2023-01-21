@@ -32,7 +32,7 @@ $result = $conn->query($sql);
     <div class="container-scroller">
         <!-- partial:../../partials/_navbar.html -->
         <?php include("nav.php") ?>
-        
+
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
             <!-- partial:../../partials/_sidebar.html -->
@@ -51,16 +51,15 @@ $result = $conn->query($sql);
                             <div class="card">
                                 <div class="card-body" style="overflow: auto;">
                                     </p>
-                                    <table class="table" >
+                                    <table class="table">
                                         <thead>
                                             <tr>
 
                                                 <th>
-                                                    <Span
-                                                        style="font-size:20px;font-family:monospace;font-weight:bold;">Quiz
+                                                    <Span style="font-size:20px;font-family:monospace;font-weight:bold;">Quiz
                                                         Title</Span>
                                                 </th>
-                                                <th></th>
+                                                <th>Status</th>
                                                 <th></th>
                                                 <th></th>
                                                 <th></th>
@@ -69,33 +68,45 @@ $result = $conn->query($sql);
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php if ($result->num_rows > 0): ?>
-                                            <?php
+                                            <?php if ($result->num_rows > 0) : ?>
+                                                <?php
                                                 while ($row = $result->fetch_assoc()) {
                                                     $quizcode = $row['QuizCode'];
                                                     echo " <tr>
                                                     <td>" .
                                                         $row['QuizTitle'] . "
                                                     </td>" . "";
-                                                    echo "<td></td>";
+
+                                                    if ($quizcode == 0) {
+                                                        echo "<td>
+                                                        <label class='badge badge-danger'>Not Active</label>
+                                                    </td>";
+                                                        echo "
+                                                <td><button name='QuizActive'  value='" . $row['QuizId'] . "' type='button' class='btn btn-outline-info btn-fw'>&nbsp; &nbsp;&nbsp; Active the quiz &nbsp;&nbsp;&nbsp;</button>
+                                                </td>";
+                                                    } else {
+                                                        echo "
+                                                        <td>
+                                                            <label style='padding-left: 20px;
+                                                            padding-right: 20px;' class='badge badge-success'> Active </label>
+                                                        </td>
+                                                        <td><button name='Quizdeactive'  value='Qid=".$row['QuizId']."&QuizCode=".$quizcode."' type='button' class='btn btn-outline-secondary btn-fw'>Go to waiting room </button>
+                                                        </td>";
+                                                    }
                                                     echo "
-                                                <td><button id='qStartl' type='button' class='btn white'>Start</button>
-                                                </td>
-                                                
                                                 <td>
                                                 <form action='QuizInfo.php' method='GET'>
-                                                    <input hidden type='text' id='QuizId'  name='edit' value='".$row['QuizId']."' >
+                                                    <input hidden type='text' id='QuizId'  name='edit' value='" . $row['QuizId'] . "' >
                                                     <button id='qEdit'  type='submit'   class='btn btn-gradient-primary btn-sm'>Edit</button>
                                                 </form>
                                                 </td>
                                                 <td>
-                                                <button name='QuizDelete' value='".$row['QuizId']."' type='button' class='btn btn-gradient-danger btn-sm'>Delete</button>
+                                                <button name='QuizDelete' value='" . $row['QuizId'] . "' type='button' class='btn btn-gradient-danger btn-sm'>Delete</button>
                                                 </td>
                                             </tr>";
-
                                                 }
                                                 $conn->close();
-                                            ?>
+                                                ?>
                                             <?php endif; ?>
                                         </tbody>
 
@@ -111,9 +122,7 @@ $result = $conn->query($sql);
                         <!-- partial:../../partials/_footer.html -->
                         <footer class="footer">
                             <div class="container-fluid d-flex justify-content-between">
-                                <span class="text-muted d-block text-center text-sm-start d-sm-inline-block"><button
-                                        type="button"
-                                        class="btn btn-gradient-primary btn-rounded btn-fw">Homepage</button></span>
+                                <span class="text-muted d-block text-center text-sm-start d-sm-inline-block"><button type="button" class="btn btn-gradient-primary btn-rounded btn-fw">Homepage</button></span>
 
                             </div>
                         </footer>
@@ -138,52 +147,100 @@ $result = $conn->query($sql);
             <!-- End custom js for this page -->
 </body>
 <script>
-$(document).ready(function() {
+    $(document).ready(function() {
 
 
-    $("button[name=QuizDelete]").click(function() {
-        var QuizId = $(this).val();
+        $("button[name=QuizDelete]").click(function() {
+            var QuizId = $(this).val();
 
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this Quiz!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-                $.ajax({
-                    url: 'DeleteQuiz.php',
-                    method: 'POST',
-                    data: {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this Quiz!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: 'DeleteQuiz.php',
+                        method: 'POST',
+                        data: {
 
-                        QuizId: QuizId
-                    },
-                    success: function(response) {
-                        console.log(response);
-                        Swal.fire(
-                            'Deleted!',
-                            'Your quiz has been deleted.',
-                            'success'
-                        ).then((result) => {
-                               window.location.reload();
+                            QuizId: QuizId
+                        },
+                        success: function(response) {
+                            console.log(response);
+                            Swal.fire(
+                                'Deleted!',
+                                'Your quiz has been deleted.',
+                                'success'
+                            ).then((result) => {
+                                window.location.reload();
 
                             })
-                    }
+                        }
 
-                })
+                    })
 
-            }
+                }
 
-        })
+            })
 
+        });
+
+        /* Read more about isConfirmed, isDenied below */
+        $("button[name=QuizActive]").click(function() {
+            var QuizId = $(this).val();
+            Swal.fire({
+                title: 'Do you want to start the Quiz?  ',
+                showDenyButton: true,
+                showCancelButton: false,
+                confirmButtonText: 'Start',
+                denyButtonText: `Don't Start`,
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+
+                    $.ajax({
+                        url: 'UpdateQCode.php',
+                        method: 'POST',
+                        data: {
+
+                            QuizId: QuizId
+                        },
+                        dataType: 'JSON',
+                        success: function(response) {
+                            console.log("QuizId=" + response.QuizId);
+                            console.log("QuizCode=" + response.QuizCode);
+
+
+
+                            Swal.fire('Your Quiz is active, you will be directed to the waiting room', '', 'success').then((result) => {
+
+                                window.location.href = "../../waitingquiz.php?Qid=" + QuizId + "&QuizCode=" + response.QuizCode;
+                            })
+                        }
+
+                    })
+
+                } else if (result.isDenied) {
+                    Swal.fire('Changes are not saved', '', 'info')
+                }
+            })
+
+
+        });
+
+        $("button[name=Quizdeactive]").click(function() {
+            var link = $(this).val();
+            window.location.href = "../../waitingquiz.php?"+link;
+
+
+        });
     });
-
-
-});
 </script>
 
 </html>

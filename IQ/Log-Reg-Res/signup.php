@@ -2,19 +2,7 @@
 
 @include '../app/database/connect.php';
 
-
-
-
-
-
-
-
-
-
-
 if (isset($_POST['submit'])) {
-
-
 
   $username = $_POST['username'];
 
