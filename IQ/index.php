@@ -57,17 +57,17 @@ include("app/database/connect.php");
 
 </head>
 <style>
-.scheduleUp {
-    color: #8549db;
-}
+    .scheduleUp {
+        color: #8549db;
+    }
 
-.quizCode {
-    border: 2px solid #b7eddd;
-    height: 44px;
-    /* margin-right: -28px; */
-    border-radius: 3px;
-    margin-top: 21px;
-}
+    .quizCode {
+        border: 2px solid #b7eddd;
+        height: 44px;
+        /* margin-right: -28px; */
+        border-radius: 3px;
+        margin-top: 21px;
+    }
 </style>
 
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -76,9 +76,7 @@ include("app/database/connect.php");
             <div class="container">
                 <div class="navbar-brand-wrapper d-flex w-100">
                     <img src="dashboard/assets/images/logo2.svg" height="70px" width="200px" alt="logo">
-                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="mdi mdi-menu navbar-toggler-icon"></span>
                     </button>
                 </div>
@@ -88,9 +86,7 @@ include("app/database/connect.php");
                             <div class="navbar-collapse-logo">
                                 <img src="images/Group2.svg" alt="">
                             </div>
-                            <button class="navbar-toggler close-button" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
                             </button>
                         </li>
@@ -101,25 +97,24 @@ include("app/database/connect.php");
                             <a class="nav-link" href="#features-section">About</a>
                         </li>
                         <?php if (isset($_SESSION['username'])) : ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="dashboard/index.php">Dashboard</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dashboard/index.php">Dashboard</a>
+                            </li>
                         <?php endif; ?>
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="#case-studies-section">My Saved Schedules</a>
                         </li> -->
                         <?php if (!isset($_SESSION['username'])) : ?>
-                        <li class="nav-item btn-contact-us pl-4 pl-lg-0">
-                            <button class="btn btn-info" onclick="location.href='Log-Reg-Res/login.php';">Login
-                            </button>
-                        </li>
+                            <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+                                <button class="btn btn-info" onclick="location.href='Log-Reg-Res/login.php';">Login
+                                </button>
+                            </li>
                         <?php endif; ?>
                         <?php if (isset($_SESSION['username'])) : ?>
-                        <li class="nav-item btn-contact-us pl-4 pl-lg-0">
-                            <button class="btn btn-opacity-light mr-1"
-                                onclick="location.href='Log-Reg-Res/logout.php';">logout
-                            </button>
-                        </li>
+                            <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+                                <button class="btn btn-opacity-light mr-1" onclick="location.href='Log-Reg-Res/logout.php';">logout
+                                </button>
+                            </li>
                         <?php endif; ?>
 
                     </ul>
@@ -135,12 +130,12 @@ include("app/database/connect.php");
             <h6 class="font-weight-normal text-muted pb-3">Simple, Fast, Interactive And No Account required to join!
             </h6>
             <div>
-                <form action="#">
+                
                     <!-- <button class="btn btn-opacity-light mr-1">Get started</button> -->
-                    <input class="quizCode" type="text" name="" placeholder="Enter quiz code">
+                    <!-- <input class="quizCode" type="text" name="" placeholder="Enter quiz code"> -->
                     <button class="btn btn-opacity-success ml-1" id="joinQuiz">Join
                         Quiz<?php if (isset($_SESSION['username'])) echo ", " . $_SESSION['username']; ?></button>
-                </form>
+                
             </div>
             <img src="images/HomepagePic.svg" alt="" class="img-fluid">
         </div>
@@ -225,27 +220,25 @@ include("app/database/connect.php");
                         <h2>Create New Quiz?</h2>
 
                         <h6 class="section-subtitle text-muted">You have to login to Create a quiz <br><br>
-                            <button class="btn btn-opacity-success ml-1"
-                                onclick="location.href='Log-Reg-Res/login.php';">Create
+                            <button class="btn btn-opacity-success ml-1" onclick="location.href='Log-Reg-Res/login.php';">Create
                                 New Quiz</button>
                         </h6>
                     </div>
                 </div>
             </section>
             <?php if (!isset($_SESSION['username'])) : ?>
-            <section class="contact-us" id="contact-section">
-                <div class="contact-us-bgimage grid-margin">
-                    <div class="pb-4">
-                        <h4 class="px-3 px-md-0 m-0" data-aos="fade-down">Login First To See Your </h4>
-                        <h4 class="pt-1" data-aos="fade-down">Saved Schedules</h4>
+                <section class="contact-us" id="contact-section">
+                    <div class="contact-us-bgimage grid-margin">
+                        <div class="pb-4">
+                            <h4 class="px-3 px-md-0 m-0" data-aos="fade-down">Login First To See Your </h4>
+                            <h4 class="pt-1" data-aos="fade-down">Saved Schedules</h4>
 
+                        </div>
+                        <div data-aos="fade-up">
+                            <button class="btn btn-rounded btn-outline-danger"><a href="Log-Reg-Res/login.php">Login</a></button>
+                        </div>
                     </div>
-                    <div data-aos="fade-up">
-                        <button class="btn btn-rounded btn-outline-danger"><a
-                                href="Log-Reg-Res/login.php">Login</a></button>
-                    </div>
-                </div>
-            </section>
+                </section>
 
 
             <?php endif ?>
@@ -309,8 +302,7 @@ include("app/database/connect.php");
                 </div>
             </section>
             <footer class="border-top">
-                <p class="text-center text-muted pt-4">Copyright © 2022<a href="https://scheup.com"
-                        class="px-1">ScheduleUp.</a>All rights reserved.</p>
+                <p class="text-center text-muted pt-4">Copyright © 2022<a href="https://scheup.com" class="px-1">ScheduleUp.</a>All rights reserved.</p>
             </footer>
         </div>
     </div>
@@ -319,27 +311,69 @@ include("app/database/connect.php");
     <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
     <script src="vendors/aos/js/aos.js"></script>
     <script src="js/landingpage.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
     </script>
 </body>
 <script>
-function init() {
-    document.getElementById('joinQuiz').addEventListener('click', function() {
-        swal({
-            title: 'Subscribed',
-            icon: "success",
-            button: "okay!",
-        })
+    $(document).ready(function() {
+        
+        let Qcode = new URLSearchParams(window.location.search).get('QuizCode');
+        if(Qcode==null){
+            Qcode="";
+        }
+
+        
+        
+        $("#joinQuiz").click(async function() {
+            const {
+                value: formValues
+            } = await Swal.fire({
+                title: 'Multiple inputs',
+                html: '<input id="par-name" placeholder="Your Name" class="swal2-input">' +
+                    '<input id="QuizCode" value="'+Qcode+'" placeholder="Quiz Code" class="swal2-input">',
+                focusConfirm: false,
+                preConfirm: () => {
+                    
+                        parName =document.getElementById('par-name').value;
+                        quizCode =document.getElementById('QuizCode').value;
+                        
+                    
+                }
+            })
+
+            if (parName!="" && quizCode!="") {
+                //Swal.fire(JSON.stringify(parName+quizCode))
+                $.ajax({
+                        url: 'Quiz-App/PartJoinQuiz.php',
+                        method: 'POST',
+                        data: {
+                            parName: parName,
+                            quizCode: quizCode
+                        },
+                        
+                        success: function(data) {
+                            
+                            // console.log("QuizCode="+response.QuizCode);
+                            if(data != "error quiz 404"){
+                                console.log(data)
+                            Swal.fire('You have been joined to the quiz', '', 'success'
+                            ).then((result) => {
+                            
+                                window.location.href = "Quiz-App/indexp.html?Qid="+data;
+                            })
+                        }else{
+                            Swal.fire('The Quiz is not active or the code is wrong', '', 'error'
+                            ) 
+                        }
+                    }
+                    })
+            }
+        });
+
+            
     });
-
-
-
-}
-
-window.addEventListener('load', init);
 </script>
 
 </html>

@@ -202,6 +202,7 @@ if (isset($_GET['edit'])) {
                                                         <label for="Question" style="font-size:20px;font-family:monospace;font-weight:bold;color:black;">Question</label>
                                                         <input type="text" class="form-control" id="createQuestion" placeholder="What is the answer?" value="<?php echo $QuestionHead; ?>">
                                                     </div>
+                                                </form>
                                             <tr>
                                                 <th>
                                                     <form class="forms-sample">
@@ -210,6 +211,7 @@ if (isset($_GET['edit'])) {
                                                             <input type="text" value="<?php echo $AnswerAIs; ?>" required class="form-control" id="AnswerA" <?php if ($IsTrueAndFalseQ === true)
                                                                                                                                                                 echo 'disabled'; ?> placeholder="Answer A">
                                                         </div>
+                                                    </form>
                                                 </th>
                                             </tr>
                                             <th>
@@ -219,6 +221,7 @@ if (isset($_GET['edit'])) {
                                                         <input type="text" value="<?php echo $AnswerBIs; ?>" required class="form-control" id="AnswerB" <?php if ($IsTrueAndFalseQ === true)
                                                                                                                                                             echo 'disabled'; ?> placeholder="Answer B">
                                                     </div>
+                                                </form>
                                             </th>
                                             </tr>
                                             <?php if ($IsTrueAndFalseQ === false) : ?>
@@ -228,6 +231,8 @@ if (isset($_GET['edit'])) {
                                                             <label for="exampleInputName1">C)</label>
                                                             <input type="text" value="<?php echo $AnswerCIs; ?>" required class="form-control" id="AnswerC" placeholder="Answer C">
                                                         </div>
+                                                  </form>
+
                                                 </th>
                                                 </tr>
 
@@ -237,7 +242,10 @@ if (isset($_GET['edit'])) {
                                                             <div class="form-group">
                                                                 <label for="exampleInputName1">D)</label>
                                                                 <input type="text" value="<?php echo $AnswerDIs; ?>" required class="form-control" id="AnswerD" placeholder="Answer D">
-                                                            </div>
+                                                        
+                                                        </div>
+                                                </form>
+
                                                     </th>
                                                 </tr>
                                             <?php endif; ?>
@@ -309,7 +317,7 @@ if (isset($_GET['edit'])) {
                                     <br>
                                     <div class="col-sm-10" style="margin-left: 0%;">
 
-                                        <button style="margin-left: 15px;" class="btn btn-gradient-light btn-rounded btn-fw">Cancel</button>
+                                        <button style="margin-left: 15px;" id="cancel" class="btn btn-gradient-light btn-rounded btn-fw">Cancel</button>
 
                                         <button type="button" name="submit" id="update" class="btn btn-gradient-success btn-rounded btn-fw">
                                             <i class="mdi mdi-file-check btn-icon-prepend"></i>
@@ -420,6 +428,12 @@ if (isset($_GET['edit'])) {
             })
 
         });
+    });
+
+
+    $("#cancel").click(function() {
+        var QuizId = $("#QuizId").val();
+        location.href = 'QuizInfo.php?edit='+QuizId;
     });
 </script>
 

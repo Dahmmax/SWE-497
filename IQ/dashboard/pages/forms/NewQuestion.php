@@ -29,67 +29,67 @@ $GetQuizId = $_GET['edit'];
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
-    .radio-toolbar {
-        background-color: white;
-        width: max-content;
-        padding: 10px 10px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: space-around;
-    }
+        .radio-toolbar {
+            background-color: white;
+            width: max-content;
+            padding: 10px 10px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-around;
+        }
 
-    .radio-toolbar label {
-        font-size: 1.2em;
-    }
-
-
-
-
-    .radio-toolbar {
-        margin: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        flex-grow: 2;
-    }
+        .radio-toolbar label {
+            font-size: 1.2em;
+        }
 
 
 
 
-    .radio-toolbar input[type="radio"] {
-        visibility: hidden;
-        display: none;
-    }
+        .radio-toolbar {
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            flex-grow: 2;
+        }
 
 
 
-    .radio-toolbar label {
-        display: inline-block;
-        background-color: white;
-        padding: 10px 20px;
-        font-family: sans-serif, Arial;
-        font-size: 16px;
-        border: 2px solid rgb(235, 119, 98);
-        border-radius: 5px;
-        cursor: pointer;
-    }
 
-    .radio-toolbar label:hover {
-        background-color: rgb(235, 119, 98);
-        color: white
-    }
+        .radio-toolbar input[type="radio"] {
+            visibility: hidden;
+            display: none;
+        }
 
-    .radio-toolbar input[type="radio"]:focus+label {
-        border: 2px solid rgb(235, 119, 98);
-    }
 
-    .radio-toolbar input[type="radio"]:checked+label {
-        background-color: rgb(250, 119, 98);
-        color: white;
-        border: 2px solid white;
-    }
+
+        .radio-toolbar label {
+            display: inline-block;
+            background-color: white;
+            padding: 10px 20px;
+            font-family: sans-serif, Arial;
+            font-size: 16px;
+            border: 2px solid rgb(235, 119, 98);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .radio-toolbar label:hover {
+            background-color: rgb(235, 119, 98);
+            color: white
+        }
+
+        .radio-toolbar input[type="radio"]:focus+label {
+            border: 2px solid rgb(235, 119, 98);
+        }
+
+        .radio-toolbar input[type="radio"]:checked+label {
+            background-color: rgb(250, 119, 98);
+            color: white;
+            border: 2px solid white;
+        }
     </style>
 </head>
 
@@ -116,12 +116,11 @@ $GetQuizId = $_GET['edit'];
                             <div class="card">
                                 <div class="form-group row" style=" margin: 0px;">
                                     <h6><label class="col-form-label"> Type of Question:
-                                    </label></h6>
+                                        </label></h6>
                                     <div class="col-sm-2">
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" required="" class="form-check-input" name="type"
-                                                    id="mcq" value="mcq" onclick="Question_mcq()">
+                                                <input type="radio" checked class="form-check-input" name="type" id="mcq" value="mcq" onclick="Question_mcq()">
                                                 MCQ
                                             </label>
                                         </div>
@@ -129,8 +128,7 @@ $GetQuizId = $_GET['edit'];
                                     <div class="col-sm-3">
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                                <input type="radio" required="" class="form-check-input" name="type"
-                                                    id="tandf" value="tandf" onclick="Question_tandf()">
+                                                <input type="radio" class="form-check-input" name="type" id="tandf" value="tandf" onclick="Question_tandf()">
                                                 True and False
                                             </label>
                                         </div>
@@ -143,22 +141,18 @@ $GetQuizId = $_GET['edit'];
                                             <tr>
                                                 <form class="forms-sample">
 
-                                                    <input hidden type="text" name="q" id="QuizId"
-                                                        value="<?php echo $GetQuizId; ?>">
+                                                    <input hidden type="text" name="q" id="QuizId" value="<?php echo $GetQuizId; ?>">
                                                     <div class="form-group">
 
-                                                        <label for="Question"
-                                                            style="font-size:20px;font-family:monospace;font-weight:bold;color:black;">Question</label>
-                                                        <input type="text" class="form-control" id="createQuestion"
-                                                            placeholder="What is the answer?">
+                                                        <label for="Question" style="font-size:20px;font-family:monospace;font-weight:bold;color:black;">Question</label>
+                                                        <input type="text" class="form-control" id="createQuestion" placeholder="What is the answer?">
                                                     </div>
                                             <tr>
                                                 <th>
                                                     <form class="forms-sample">
                                                         <div class="form-group">
                                                             <label for="QusetionInputA">A)</label>
-                                                            <input type="text"  required class="form-control"
-                                                                id="AnswerA" placeholder="Answer A">
+                                                            <input type="text" required class="form-control" id="AnswerA" placeholder="Answer A">
                                                         </div>
                                                 </th>
                                             </tr>
@@ -166,8 +160,7 @@ $GetQuizId = $_GET['edit'];
                                                 <form class="forms-sample">
                                                     <div class="form-group">
                                                         <label for="exampleInputName1">B)</label>
-                                                        <input type="text" required class="form-control" id="AnswerB"
-                                                            placeholder="Answer B">
+                                                        <input type="text" required class="form-control" id="AnswerB" placeholder="Answer B">
                                                     </div>
                                             </th>
                                             </tr>
@@ -175,8 +168,7 @@ $GetQuizId = $_GET['edit'];
                                                 <form class="forms-sample">
                                                     <div class="form-group">
                                                         <label for="exampleInputName1">C)</label>
-                                                        <input type="text" required class="form-control" id="AnswerC"
-                                                            placeholder="Answer C">
+                                                        <input type="text" required class="form-control" id="AnswerC" placeholder="Answer C">
                                                     </div>
                                             </th>
                                             </tr>
@@ -186,8 +178,7 @@ $GetQuizId = $_GET['edit'];
                                                     <form class="forms-sample">
                                                         <div class="form-group">
                                                             <label for="exampleInputName1">D)</label>
-                                                            <input type="text" required class="form-control"
-                                                                id="AnswerD" placeholder="Answer D">
+                                                            <input type="text" required class="form-control" id="AnswerD" placeholder="Answer D">
                                                         </div>
                                                 </th>
                                             </tr>
@@ -198,22 +189,23 @@ $GetQuizId = $_GET['edit'];
                                                         <h4 class="card-title">Choose The Right Answer</h4>
                                                         <div class="radio-toolbar">
 
-                                                            <input type="radio" required id="A"  name="val" value="A" />
+                                                            <input type="radio" id="A" name="val" value="A" required="required" />
                                                             <label for="A">A</label>
 
 
-                                                            <input type="radio" required id="B" name="val" value="B" />
+                                                            <input type="radio" id="B" name="val" value="B" />
                                                             <label for="B">B</label>
                                                             <div id="but-c">
-                                                                <input type="radio" required id="C" name="val"
-                                                                    value="C" />
+                                                                <input type="radio" id="C" name="val" value="C" />
                                                                 <label for="C">C</label>
                                                             </div>
 
                                                             <div id="but-d">
-                                                            <input type="radio" required id="D" name="val" value="D" />
-                                                            <label for="D">D</label>
+                                                                <input type="radio" id="D" name="val" value="D" />
+                                                                <label for="D">D</label>
+
                                                             </div>
+
                                                         </div>
 
 
@@ -226,11 +218,9 @@ $GetQuizId = $_GET['edit'];
                                     <br>
                                     <div class="col-sm-10" style="margin-left: 0%;">
 
-                                        <button style="margin-left: 15px;"
-                                            class="btn btn-gradient-light btn-rounded btn-fw">Cancel</button>
+                                        <button style="margin-left: 15px;" class="btn btn-gradient-light btn-rounded btn-fw">Cancel</button>
 
-                                        <button type="button" name="submit" id="update"
-                                            class="btn btn-gradient-success btn-rounded btn-fw">
+                                        <button type="button" name="submit" id="update" class="btn btn-gradient-success btn-rounded btn-fw">
                                             <i class="mdi mdi-file-check btn-icon-prepend"></i>
                                             Submit</button>
                                     </div>
@@ -279,90 +269,116 @@ $GetQuizId = $_GET['edit'];
 
 </body>
 <script>
-function Question_tandf() {
-    document.getElementById('QC').style.display = 'none';
-    document.getElementById('QD').style.display = 'none';
-    document.getElementById('AnswerA').value = 'True';
-    document.getElementById('AnswerB').value = 'False';
+    function Question_tandf() {
+        document.getElementById('QC').style.display = 'none';
+        document.getElementById('QD').style.display = 'none';
+        document.getElementById('AnswerA').value = 'True';
+        document.getElementById('AnswerB').value = 'False';
 
-    document.getElementById('AnswerA').disabled = true;
-    document.getElementById('AnswerB').disabled = true;
+        document.getElementById('AnswerA').disabled = true;
+        document.getElementById('AnswerB').disabled = true;
 
-    document.getElementById('but-c').style.display = 'none';
-    document.getElementById('but-d').style.display = 'none';
-};
-function Question_mcq() {
-    document.getElementById('QC').style.display = '';
-    document.getElementById('QD').style.display = '';
-    document.getElementById('AnswerA').value = '';
-    document.getElementById('AnswerB').value = '';
+        document.getElementById('but-c').style.display = 'none';
+        document.getElementById('but-d').style.display = 'none';
+    };
 
-    document.getElementById('AnswerA').disabled = false;
-    document.getElementById('AnswerB').disabled = false;
+    function Question_mcq() {
+        document.getElementById('QC').style.display = '';
+        document.getElementById('QD').style.display = '';
+        document.getElementById('AnswerA').value = '';
+        document.getElementById('AnswerB').value = '';
 
-    document.getElementById('but-c').style.display = '';
-    document.getElementById('but-d').style.display = '';
-};
+        document.getElementById('AnswerA').disabled = false;
+        document.getElementById('AnswerB').disabled = false;
+
+        document.getElementById('but-c').style.display = '';
+        document.getElementById('but-d').style.display = '';
+    };
 </script>
 <script>
-$(document).ready(function() {
+    $(document).ready(function() {
 
 
 
-    $("#update").click(function() {
-        //
+        $("#update").click(function() {
+            //
 
-        //
-        var QuestionHead = $("#createQuestion").val();
-        // val answers
-        var AnswerA = $("#AnswerA").val();
-        var AnswerB = $("#AnswerB").val();
-        var AnswerC = $("#AnswerC").val();
-        var AnswerD = $("#AnswerD").val();
-        // correct Answer
-        var iscorrect = document.querySelector('input[name="val"]:checked').value;
-        var QuizId = $("#QuizId").val();
-
-
-        Swal.fire({
-            title: 'Do you want to save the changes?',
-            showDenyButton: true,
-            showCancelButton: true,
-            confirmButtonText: 'Save',
-            denyButtonText: `Don't save`,
-        }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-                $.ajax({
-                    url: 'SaveNewQuestion.php',
-                    method: 'POST',
-                    data: {
-                        QuestionHead: QuestionHead,
-                        Score: 2,
-                        iscorrect: iscorrect,
-                        QuizId: QuizId,
-                        AnswerA: AnswerA,
-                        AnswerB: AnswerB,
-                        AnswerC: AnswerC,
-                        AnswerD: AnswerD
-                    },
-                    success: function(response) {
-                        console.log(response);
-                        Swal.fire('Saved!', '', 'success').then((result) => {
-                            location.href = 'QuizInfo.php?edit='+QuizId;
-                        })
-
-                    }
+            //
+            var QuestionHead = $("#createQuestion").val();
+            // val answers
+            var AnswerA = $("#AnswerA").val();
+            var AnswerB = $("#AnswerB").val();
+            var AnswerC = $("#AnswerC").val();
+            var AnswerD = $("#AnswerD").val();
+            var type = document.querySelector('input[name="type"]:checked').value;
+            
+            // correct Answer
+            if ($("input[name='val']:checked").length > 0) {
+                var iscorrect = document.querySelector('input[name="val"]:checked').value;
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please make sure you have choose the correct answer and fill all the answers. !'
+                    
 
                 })
-
-            } else if (result.isDenied) {
-                Swal.fire('Changes are not saved', '', 'info')
+                return;
             }
-        })
+
+            var QuizId = $("#QuizId").val();
+
+
+            
+                if (AnswerA != "" && AnswerB != "" && AnswerC != "" && AnswerD != "" && QuestionHead !="" || type=="tandf" && QuestionHead !="") {
+                    Swal.fire({
+                        title: 'Do you want to save the changes?',
+                        showDenyButton: true,
+                        showCancelButton: true,
+                        confirmButtonText: 'Save',
+                        denyButtonText: `Don't save`,
+                    }).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            $.ajax({
+                                url: 'SaveNewQuestion.php',
+                                method: 'POST',
+                                data: {
+                                    QuestionHead: QuestionHead,
+                                    Score: 2,
+                                    iscorrect: iscorrect,
+                                    QuizId: QuizId,
+                                    AnswerA: AnswerA,
+                                    AnswerB: AnswerB,
+                                    AnswerC: AnswerC,
+                                    AnswerD: AnswerD
+                                },
+                                success: function(response) {
+                                    console.log(response);
+                                    Swal.fire('Saved!', '', 'success').then((result) => {
+                                        location.href = 'QuizInfo.php?edit=' + QuizId;
+                                    })
+
+                                }
+
+                            })
+
+                        } else if (result.isDenied) {
+                            Swal.fire('Changes are not saved', '', 'info')
+                        }
+                    })
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please make sure you have fill all the answers and choose the correct answer!',
+                        footer: '<a href="">Why do I have this issue?</a>'
+                    })
+                }
+            
+        });
 
     });
-});
 </script>
 
 </html>

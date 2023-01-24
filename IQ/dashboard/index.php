@@ -116,10 +116,10 @@ function countQuestions(){
                                                             echo"
                                                         <td>
                                                             <label class='badge badge-danger'>Not Active</label>
-                                                        </td> <td>". 
-                                                        
-                                                        $row['QuizCode']."
-                                                        </td>"."
+                                                        </td> 
+                                                        <td>
+                                                        --------------
+                                                        </td>
                                                             ";
                                                         }else{
                                                             echo"

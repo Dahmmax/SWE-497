@@ -50,7 +50,7 @@
             </span>
         </li>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                 aria-controls="ui-basic">
                 <span class="menu-title">Basic UI Elements</span>
@@ -110,7 +110,10 @@
                     </li>
                 </ul>
             </div>
-        </li>
+        </li> -->
+        <!--  -->
+        <!--  -->
+        <!--  -->
         <!-- <li class="nav-item sidebar-actions">
           <span class="nav-link">
             <div class="border-bottom">

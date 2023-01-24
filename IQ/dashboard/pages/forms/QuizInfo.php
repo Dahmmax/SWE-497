@@ -137,8 +137,7 @@ $resultA = $conn->query($sqlA);
                                                     </td>" . "";
                                                     echo "<td></td>";
                                                     echo "
-                                                    <td><button id='qStartl' type='button' class='btn white'>Start</button>
-                                                    </td>
+                                                   
     
                                                     <td>
                                                     <form action='EditQuestion.php' method='GET'>
