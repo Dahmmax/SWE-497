@@ -10,24 +10,43 @@
     <!-- FontAweome CDN Link for Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<style>
+.loader {
+    border: 8px solid #007bFF;
+    border-top: 8px solid #f3f3f3;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* #lod{
+    opacity: 0;
+} */
+</style>
 </head>
 
 <body>
     <!-- start Quiz button -->
-    <div class="start_btn"><button>Start Quiz</button></div>
+    <!-- <div class="start_btn"><button>Start Quiz</button></div> -->
 
     <!-- Info Box -->
     <div class="info_box">
         <div class="info-title"><span>Some Rules of this Quiz</span></div>
         <div class="info-list">
-            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+            <div class="info">1. You will have only <span id="ruletime"> </span> per each question.</div>
             <div class="info">2. Once you select your answer, it can't be undone.</div>
             <div class="info">3. You can't select any option once time goes off.</div>
-            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            <div class="info">4. Don't refresh the page during the quiz.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers based on <span id="quizmood"> </span> mode</div>
         </div>
         <div class="buttons">
+            <p>Waiting to start the quiz. &nbsp</p>
+            <div class="loader"></div>
             <!-- <button class="quit">Exit Quiz</button>
             <button class="restart">Continue</button> -->
         </div>
@@ -36,7 +55,7 @@
     <!-- Quiz Box -->
     <div class="quiz_box">
         <header>
-            <div class="title">Awesome Quiz Application</div>
+            <div class="title"> </div>
             <div class="timer">
                 <div class="time_left_txt">Time Left</div>
                 <div class="timer_sec"></div>
@@ -60,7 +79,12 @@
             <div class="total_que">
                 <!-- Here I've inserted Question Count Number from JavaScript -->
             </div>
-            <button class="next_btn"></button>
+            <div class="butnnn" style="display: flex; align-items: center; " id="lod">
+                <p>Waiting to next question. &nbsp</p>
+                <div class="loader"></div>
+                <!-- <button class="quit">Exit Quiz</button>
+                <button class="restart">Continue</button> -->
+            </div>
         </footer>
     </div>
 
@@ -75,7 +99,7 @@
         </div>
         <div class="buttons">
             
-            <button class="quit" onClick="window.location.href='../index.php';">Leave Quiz</button>
+            <button class="quit" id="quit-p" >Show Top5 LeaderBoard</button>
         </div>
     </div>
 

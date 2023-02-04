@@ -1066,7 +1066,7 @@
 
                 <div class="navbar-brand-wrapper d-flex w-100">
 
-                    <img src="../images/PictureLogo.png" height="45px" width="35px" alt="">
+                    <img src="../dashboard/assets/images/logo-mini.svg" height="70px" width="200px" alt="">
 
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

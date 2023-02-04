@@ -15,11 +15,20 @@ if (isset($_POST['parName']) && !empty($_POST['quizCode'])) {
 
         $sqlInsert = "INSERT INTO participants (ParticipantsName,QuizId,QuizCode) VALUES ('$parName', '$getQuizId','$quizCode')";
         $resultInsert = $conn->query($sqlInsert);
-        echo $getQuizId;
-        mysqli_close($conn);
+        $pid = $conn->insert_id;
+        $getQuizId;
 
-    
-    }else{
+        $infop = [];
+
+
+        array_push($infop, $getQuizId);
+        array_push($infop, $pid);
+        
+
+
+        echo json_encode($infop);
+        mysqli_close($conn);
+    } else {
         echo "error quiz 404";
     }
 }

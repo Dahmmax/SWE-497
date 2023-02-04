@@ -1,7 +1,8 @@
 <?php session_start();
 include("../../../app/database/connect.php");
 $userid = $_SESSION['id'];
-$sql = "SELECT QuizId, QuizTitle, GradingType, QuizCode, created_at FROM quiz WHERE UserId='$userid' ";
+$sql = "SELECT DISTINCT quiz.QuizId, quiz.QuizTitle, quiz.GradingType, quiz.QuizCode, quiz.created_at 
+FROM quiz,question WHERE quiz.QuizId = question.QuizId AND quiz.UserId='$userid'; ";
 $result = $conn->query($sql);
 
 ?>

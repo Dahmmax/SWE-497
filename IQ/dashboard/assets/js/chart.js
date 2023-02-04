@@ -133,16 +133,42 @@ $(function () {
     }
 
   };
+  let dataavg = [];
+  let dataTitle = [];
+
+  var j =0;
+  $.ajax({
+    url: 'assets/js/getdata.php',
+    method: 'POST',
+    dataType: 'json',
+    async: false,
+    success: function (data) {
+      for(var i=0; i<data.length;i++){
+        dataTitle.push(data[i][0]);
+        dataavg.push(data[i][1]);
+
+      }
+
+
+      
+
+      
+
+    }
+
+  })
+
+
   var doughnutPieData = {
     datasets: [{
-      data: [30, 40, 30],
+      data: dataavg,
       backgroundColor: [
-        'rgba(255, 99, 132, 0.5)',
-        'rgba(54, 162, 235, 0.5)',
-        'rgba(255, 206, 86, 0.5)',
-        'rgba(75, 192, 192, 0.5)',
-        'rgba(153, 102, 255, 0.5)',
-        'rgba(255, 159, 64, 0.5)'
+        'rgba(255, 99, 132, 0.7)',
+        'rgba(54, 162, 235, 0.7)',
+        'rgba(255, 206, 86, 0.7)',
+        'rgba(75, 192, 192, 0.7)',
+        'rgba(153, 102, 255, 0.7)',
+        'rgba(255, 159, 64, 0.7)'
       ],
       borderColor: [
         'rgba(255,99,132,1)',
@@ -155,11 +181,7 @@ $(function () {
     }],
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-      'Pink',
-      'Blue',
-      'Yellow',
-    ]
+    labels: dataTitle
   };
   var doughnutPieOptions = {
     responsive: true,

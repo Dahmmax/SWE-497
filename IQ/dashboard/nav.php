@@ -22,17 +22,17 @@
             <li class="nav-item nav-profile dropdown">
                 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    <div class="nav-profile-img">
+                    <!-- <div class="nav-profile-img">
                         <img src="assets/images/faces/face1.jpg" alt="image">
                         <span class="availability-status online"></span>
-                    </div>
+                    </div> -->
                     <div class="nav-profile-text">
                         <p class="mb-1 text-black"><?php echo $_SESSION['username'] ?></p>
                     </div>
                 </a>
                 <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                    <a class="dropdown-item" href="#">
-                        <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
+                    <a class="dropdown-item" href="../index.php">
+                        <i class="mdi mdi-cached me-2  mdi-home"></i> HomePage </a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="../Log-Reg-Res/logout.php">
                         <i class="mdi mdi-logout me-2 text-primary"

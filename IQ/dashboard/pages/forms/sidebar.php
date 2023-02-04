@@ -2,11 +2,11 @@
     <ul class="nav">
         <li class="nav-item nav-profile">
             <a href="#" class="nav-link">
-                <div class="nav-profile-image">
+                <!-- <div class="nav-profile-image">
                     <img src="../../assets/images/faces/face1.jpg" alt="profile">
                     <span class="login-status online"></span>
-                    <!--change to offline or busy as needed-->
-                </div>
+                    
+                </div> -->
                 <div class="nav-profile-text d-flex flex-column">
                     <span class="font-weight-bold mb-2"><?php echo $_SESSION['username']; ?></span>
                     <span class="text-secondary text-small">Instructor</span>
@@ -41,7 +41,7 @@
                         <p class="text-secondary">Quiz Scores</p>
                     </div>
                     <ul class="gradient-bullet-list mt-4">
-                        <a href="#" style="text-decoration: none;">
+                        <a href="QuizScores.php" style="text-decoration: none;">
                             <button class="btn btn-block btn-lg btn-gradient-info mt-4" style="display: block;">Quiz
                                 scores </button></a>
                     </ul>
