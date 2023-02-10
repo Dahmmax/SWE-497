@@ -54,7 +54,7 @@ include "../nav-login.php";
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>ScheduleUp - Log In</title>
+    <title>Interactive Quiz - Log In</title>
 
     <link rel="stylesheet" href="../css/style.css">
 

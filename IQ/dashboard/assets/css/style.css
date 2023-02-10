@@ -20255,7 +20255,7 @@ dl li {
 }
 
 .navbar .navbar-brand-wrapper .navbar-brand img {
-  width: calc(260px - 120px);
+  width: auto;
   max-width: 100%;
   height: 55px;
   margin: auto;
@@ -20268,7 +20268,7 @@ dl li {
 
 .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini img {
   /* width: calc(70px - 50px); */
-  max-width: 100%;
+  width: auto;
   height: 55px;
   margin: auto;
 }

@@ -9,14 +9,14 @@ if (isset($_POST['submit'])) {
     $GradingType = $_POST['GradingType'];
 
     $UserId = $_SESSION['id'];
-    $Quizcode = 0;
+    // $Quizcode = 0;
 
-    $insert = "INSERT INTO quiz(QuizTitle, Duration, Quizcode,GradingType, UserId) VALUES (?, ?, ?, ?, ?) ";
+    $insert = "INSERT INTO quiz(QuizTitle, Duration, GradingType, UserId) VALUES (?, ?, ?, ?) ";
 
     if ($stmt = mysqli_prepare($conn, $insert)) {
 
 
-        mysqli_stmt_bind_param($stmt, 'sddsd', $QuizTitle, $QuizDuration, $Quizcode,$GradingType, $UserId);
+        mysqli_stmt_bind_param($stmt, 'sdsd', $QuizTitle, $QuizDuration,$GradingType, $UserId);
 
         mysqli_stmt_execute($stmt);
 
